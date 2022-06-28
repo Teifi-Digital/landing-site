@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_section9s",
+  "info": {
+    "displayName": "section9"
+  },
+  "options": {},
+  "attributes": {
+    "text_1": {
+      "type": "string"
+    },
+    "icons": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "text_2": {
+      "type": "string"
+    }
+  }
+}

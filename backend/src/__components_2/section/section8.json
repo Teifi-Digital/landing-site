@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_section8s",
+  "info": {
+    "displayName": "section8"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "form": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.input"
+    }
+  }
+}

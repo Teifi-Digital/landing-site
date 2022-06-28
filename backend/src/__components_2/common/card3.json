@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_common_card3s",
+  "info": {
+    "displayName": "card3"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "background_color": {
+      "type": "string"
+    }
+  }
+}

@@ -9,6 +9,7 @@
     "watch-admin": "strapi develop --watch-admin",
     "start": "strapi start",
     "build": "strapi build",
+    "_build": "rimraf build .cache && npm run build",
     "strapi": "strapi"
   },
   "devDependencies": {},

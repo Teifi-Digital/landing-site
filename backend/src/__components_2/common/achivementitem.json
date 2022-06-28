@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_common_achivementitems",
+  "info": {
+    "displayName": "achivementitem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "no": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    }
+  }
+}

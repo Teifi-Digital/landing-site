@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_common_card_2s",
+  "info": {
+    "displayName": "card_2"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "headline": {
+      "type": "text"
+    },
+    "line_items": {
+      "type": "json"
+    }
+  }
+}

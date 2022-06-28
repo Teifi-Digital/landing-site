@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_section_section_6s",
+  "info": {
+    "displayName": "section_6"
+  },
+  "options": {},
+  "attributes": {
+    "quote_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.quote"
+    }
+  }
+}
