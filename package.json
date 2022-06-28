@@ -1,0 +1,13 @@
+{
+  "name": "teifi-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "npm run --prefix frontend dev",
+    "backend": "npm run --prefix backend watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
