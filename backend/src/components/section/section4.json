@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_section_section4s",
+  "info": {
+    "displayName": "section4",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "achivement_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.achivement"
+    },
+    "card2_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card2"
+    }
+  }
+}

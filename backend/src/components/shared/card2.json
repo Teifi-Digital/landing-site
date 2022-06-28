@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_card2s",
+  "info": {
+    "displayName": "card2"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "headline": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_button2s",
+  "info": {
+    "displayName": "button2"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

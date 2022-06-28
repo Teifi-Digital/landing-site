@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_section2s",
+  "info": {
+    "displayName": "section2"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "paragraph_1": {
+      "type": "text"
+    },
+    "paragraph_2": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button1"
+    }
+  }
+}

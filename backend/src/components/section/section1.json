@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_section1s",
+  "info": {
+    "displayName": "section1"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "anchor_items": {
+      "type": "json"
+    }
+  }
+}
