@@ -5,6 +5,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: $bodyFontFamily;
+  font-style: normal;
+  font-weight: 500;
+  color: $textColor;
 }
 
 a {
@@ -14,4 +17,28 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.section1-container {
+  background-color: #000514;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  justify-content: space-between;
+  .anchor {
+    display: flex;
+    .anchor-item {
+      a {
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.019em;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        text-transform: capitalize;
+      }
+      &:not(:last-child) {
+        margin-right: 66px;
+      }
+    }
+  }
 }
