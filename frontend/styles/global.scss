@@ -29,6 +29,11 @@ a {
   .anchor {
     display: flex;
     .anchor-item {
+      height: 42px;
+      width: 128px;
+      text-align: center;
+      line-height: 38px;
+      cursor: pointer;
       a {
         font-size: 14px;
         line-height: 150%;
@@ -36,9 +41,12 @@ a {
         font-feature-settings: 'tnum' on, 'lnum' on;
         text-transform: capitalize;
       }
-      &:not(:last-child) {
-        margin-right: 66px;
-      }
+    }
+    .anchor-active {
+      background: #000514;      
+      border: 0.5px solid #1492FF;
+      box-shadow: 0px 0px 5px 1px #1492FF;
+      border-radius: 0px 14px;
     }
   }
 }
