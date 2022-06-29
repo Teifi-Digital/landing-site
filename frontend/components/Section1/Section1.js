@@ -3,10 +3,9 @@ import { API_URL } from '@/config/index'
 
 function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } } }) {
   const [anchorActive, setAnchorActive] = useState('contact')
-  console.log('→ anchorActive', anchorActive)
 
   const changeAnchor = (anchor) => {
-  console.log('→ anchor', anchor)
+    console.log('→ anchor', anchor)
     setAnchorActive(anchor)
   }
 
@@ -20,7 +19,7 @@ function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } }
           const added = anchor === anchorActive? 'anchor-active': ''
           return (
             <div key={`anchor_${index}`} className={`anchor-item ${added}`} onClick={() => changeAnchor(anchor)}>
-              {/* <a href={`#${anchor}`}>{anchor}</a> */}
+              <a href={`#${anchor}`}>{anchor}</a>
             </div>
           )
         })}
