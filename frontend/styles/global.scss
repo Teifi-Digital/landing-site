@@ -5,6 +5,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: $bodyFontFamily;
+  * {
+    box-sizing: border-box;
+  }
 }
 
 a {
@@ -15,3 +18,79 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* SECTION OUR PROJECT - 5 */ 
+.section-our-projects {
+  .section-our-projects-container {
+    background-color: #000514;
+    
+  }
+  .section-our-projects-top {
+    max-width: 1090px;
+
+  }
+  .section-our-projects-tag {
+    color: #1492FF;    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: -2.3%;
+  }
+  .section-our-projects-headline {
+    color: #FFFFFF;    
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 80px;
+    letter-spacing: -2.3%;
+  }
+  .section-our-projects-paragraph {
+    width: 573px;
+    color: #FFFFFF;    
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 39.6px;
+    letter-spacing: 0.5px;
+  }
+}
+/* END SECTION OUR PROJECT - 5 */ 
+
+/* SECTION CUSTOMER REVIEW - 6 */ 
+.section-customer-review {
+  .section-customer-review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+  }
+  .section-customer-review-slider { 
+    width: 750px;
+    .section-customer-review-slider-item-quote {
+      color: #000000;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 44px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+    .section-customer-review-slider-item-name {
+      color: #1492FF;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 44px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+    .section-customer-review-slider-item-company {
+      color: #1492FF;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+  }
+}
+/* END SECTION CUSTOMER REVIEW - 6 */
