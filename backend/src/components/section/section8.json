@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_section8s",
+  "info": {
+    "displayName": "section8",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "input_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.input"
+    }
+  }
+}

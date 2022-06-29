@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_section_section5s",
+  "info": {
+    "displayName": "section5"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "logo_items": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

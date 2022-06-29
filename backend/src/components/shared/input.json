@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_inputs",
+  "info": {
+    "displayName": "input"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "phone"
+      ]
+    },
+    "autocomplete": {
+      "type": "string"
+    },
+    "max_length": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_section7s",
+  "info": {
+    "displayName": "section7"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    },
+    "card3_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card3"
+    }
+  }
+}
