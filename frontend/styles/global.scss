@@ -1,3 +1,4 @@
+@import 'fonts.css';
 @import 'variables.scss';
 
 html,
@@ -8,6 +9,9 @@ body {
   * {
     box-sizing: border-box;
   }
+  font-style: normal;
+  font-weight: 500;
+  color: $textColor;
 }
 
 a {
@@ -94,3 +98,81 @@ a {
   }
 }
 /* END SECTION CUSTOMER REVIEW - 6 */
+.section1-container {
+  background-color: #000514;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  justify-content: space-between;
+  border-bottom: 0.2px solid #1492FF;
+  box-shadow: 0px 0px 4px #1492FF;
+  
+  .anchor {
+    display: flex;
+    .anchor-item {
+      height: 42px;
+      width: 128px;
+      text-align: center;
+      line-height: 38px;
+      cursor: pointer;
+      a {
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: -0.019em;
+        font-feature-settings: 'tnum' on, 'lnum' on;
+        text-transform: capitalize;
+      }
+    }
+    .anchor-active {
+      background: #000514;      
+      border: 0.5px solid #1492FF;
+      box-shadow: 0px 0px 5px 1px #1492FF;
+      border-radius: 0px 14px;
+    }
+  }
+}
+
+.section2-container {
+  height: 657px;
+  background: #000514;
+  .headline {
+    padding-top: 143px;
+    margin-left: 175px;
+    width: 407px;
+    font-weight: 700;
+    font-size: 39.619px;
+    line-height: 150%;
+    letter-spacing: 1.03496px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+  .emphasize {
+    color: #1492FF;
+  }
+  .paragraph-1 {
+    margin-top: 25px;
+    margin-left: 175px;
+    width: 644px;
+    font-weight: 400;
+    font-size: 17.5069px;
+    line-height: 150%;
+    letter-spacing: 0.45733px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  .paragraph-2 {
+    margin-top: 57px;
+    margin-left: 175px;
+    width: 644px;
+    font-weight: 400;
+    font-size: 17.5069px;
+    line-height: 150%;
+    letter-spacing: 0.45733px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  .button {
+    margin-top: 57px;
+    margin-left: 175px;
+  }
+}

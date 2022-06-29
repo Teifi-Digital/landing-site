@@ -9,11 +9,7 @@ module.exports = {
         .query('api::page.page')
         .findOne({
           where: { handle },
-          populate: {
-            section_items: {
-              populate: true
-            }
-          }
+          populate: true
         })
         
         return transformResponse(entry.section_items)
