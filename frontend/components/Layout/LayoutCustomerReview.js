@@ -22,7 +22,7 @@ function LayoutCustomerReview(props) {
     }
   return (
     <div className="section-customer-review">
-      <div className="section-customer-review-container">
+      <div className="section-customer-review-container container-odd">
           <Slider {...sliderData.settings} className={sliderData.className}>
           {sliderData.data.map((slide, index) => {
             return (
