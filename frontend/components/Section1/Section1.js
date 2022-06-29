@@ -16,7 +16,7 @@ function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } }
       </div>
       <div className='anchor'>
         {anchor_items.map((anchor, index) => {
-          const added = anchor === anchorActive? 'anchor-active': ''
+          const added = anchor === anchorActive ? 'anchor-active' : ''
           return (
             <div key={`anchor_${index}`} className={`anchor-item ${added}`} onClick={() => changeAnchor(anchor)}>
               <a href={`#${anchor}`}>{anchor}</a>
