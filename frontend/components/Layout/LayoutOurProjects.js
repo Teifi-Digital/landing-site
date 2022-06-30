@@ -33,12 +33,12 @@ function LayoutOurProjects(props) {
     className: 'section-our-projects-slider',
     }
   return (
-    <div className="section-our-projects section-page">
+    <div className="section-our-projects section-page" id="our-projects">
       <div className="section-our-projects-container container-even">
         <div className="container-content">
             <LayoutRightSide selected_key = "our-projects" />
             <div className="section-our-projects-top">
-                  <div className="section-our-projects-tag section-tag" id="our-projects">
+                  <div className="section-our-projects-tag section-tag">
                     <span>{data.tag}</span>
                   </div>
                   <div className="section-our-projects-headline item-headline section-headline">

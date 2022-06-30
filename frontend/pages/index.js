@@ -11,8 +11,8 @@ export default function Home({ data }) {
   return (
     <>
     <Layout title="Teifi Digital">
-      <Section1 data={data[0]} />
-      <Section2 data={data[1]} />
+      {/* <Section1 data={data[0]} />
+      <Section2 data={data[1]} /> */}
       <LayoutOurServices data={data[2]} />
       <LayoutOurAchievements data={data[3]} />
       <LayoutOurProjects data={data[4]} />

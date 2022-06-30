@@ -5,12 +5,12 @@ import LayoutRightSide from "./LayoutRightSide";
 function LayoutOurServices(props) {
   const { data } = props;  
   return (
-    <div className="section-our-services section-page">
+    <div className="section-our-services section-page" id="our-services">
       <div className="section-our-services-container container-odd">
         <div className="container-content">
           <LayoutRightSide selected_key = "our-services" />
           <div className="section-our-services-top">
-                <div className="section-our-services-tag section-tag" id="our-services">
+                <div className="section-our-services-tag section-tag">
                   <span>{data.tag}</span>
                 </div>
                 <div className="section-our-services-headline item-headline section-headline">

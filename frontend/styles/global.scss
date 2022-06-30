@@ -28,14 +28,13 @@ a {
   position: relative;
   width: 100%;
 }
-.container-even {  
+.container-even {
   background-color: $backgroundEven;
   .item-headline {
     color: $textColorHeadlineEven;
   }
   .item-paragraph {
     color: $textColorParagraphEven;
-
   }
 }
 .container-odd {
@@ -60,8 +59,8 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: -2.3%;
-  margin: $marginDesktopSmall;
+  letter-spacing: -2.3%;  
+  margin: 0 40px;
   @media (max-width: 600px) {
     font-size: 16px;
     line-height: 32px;
@@ -72,8 +71,8 @@ a {
   font-weight: 700;
   font-size: 40px;
   line-height: 80px;
-  letter-spacing: -2.3%;
-  margin: $marginDesktopSmall;
+  letter-spacing: -2.3%;  
+  margin: 0 40px;
   @media (max-width: 600px) {
     font-size: 32px;
     line-height: 64px;
@@ -85,7 +84,7 @@ a {
   font-size: 22px;
   line-height: 39.6px;
   letter-spacing: 0.5px;
-  margin: $marginDesktopSmall;
+  margin: 0 40px;
   @media (max-width: 600px) {
     font-size: 14px;
     line-height: 23.8px;
@@ -179,7 +178,13 @@ a {
 /* END SECTION OUR SERVICE - 3 */ 
 
 /* SECTION OUR ACHIVEMENTS - 4 */ 
-.section-our-achievements {  
+.section-our-achievements {
+  .section-our-achievements-container {
+    background-color: $backgroundOdd;
+    .container-content {
+      background-color: #FFFFFF;
+    }
+  }
   .section-our-achievements-top {
     max-width: 1090px;
   }
@@ -263,7 +268,7 @@ a {
     }
   }
   .section-our-achievements-bottom-cards {
-    padding: $contentPaddingMobileSmall 0;
+    padding: $contentPaddingMobileSmall;
     display: flex;
     justify-content: center;    
     @media (max-width: 600px) {
@@ -407,10 +412,16 @@ a {
 /* RIGHT SIDE SECTION */
 .section-right-side {
   position: absolute;
+  top: 0;
   right: 60px;
   z-index: 2;
   @media (max-width: 600px) {
     display: none;
+  }
+  .section-right-side-container {
+    .container-content {
+      padding-top: 40px;
+    }
   }
   .section-right-side-container.black {    
     color: #000514;

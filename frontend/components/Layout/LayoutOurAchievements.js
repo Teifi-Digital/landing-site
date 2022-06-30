@@ -4,12 +4,12 @@ import LayoutRightSide from "./LayoutRightSide";
 function LayoutOurAchievements(props) {
   const { data } = props;  
   return (
-    <div className="section-our-achievements section-page">
+    <div className="section-our-achievements section-page" id="our-achievements">
       <div className="section-our-achievements-container container-odd">
         <div className="container-content">
           <LayoutRightSide selected_key = "our-achievements" />
           <div className="section-our-achievements-top">
-                <div className="section-our-achievements-tag section-tag" id="our-achievements">
+                <div className="section-our-achievements-tag section-tag" >
                   <span>{data.tag}</span>
                 </div>
                 <div className="section-our-achievements-headline item-headline section-headline">
