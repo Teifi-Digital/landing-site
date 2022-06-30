@@ -5,9 +5,14 @@ import Section7 from '@/components/Section7/Section7'
 import Section8 from '@/components/Section8/Section8'
 import BaseService from '@/services/base'
 import { ToastContainer } from 'react-toastify'
+import LayoutOurServices from '@/components/Layout/LayoutOurServices';
+import LayoutOurProjects from '@/components/Layout/LayoutOurProjects';
+import LayoutOurAchievements from '@/components/Layout/LayoutOurAchievements';
+import LayoutCustomerReview from '@/components/Layout/LayoutCustomerReview';
 
 export default function Home({ data }) {
   return (
+    <>
     <Layout title="Teifi Digital">
       <ToastContainer />
       <ToastContainer />
@@ -16,6 +21,11 @@ export default function Home({ data }) {
       <Section7 data={data[6]} />
       <Section8 data={data[7]} />
     </Layout>
+    <LayoutOurServices data={data[2]} />    
+    <LayoutOurAchievements data={data[3]} />    
+    <LayoutOurProjects data={data[4]} />    
+    <LayoutCustomerReview data={data[5]} />    
+    </>
   )
 }
 

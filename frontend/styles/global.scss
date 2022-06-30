@@ -6,6 +6,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: $bodyFontFamily;
+  * {
+    box-sizing: border-box;
+  }
   font-style: normal;
   font-weight: 500;
   color: $textColor;
@@ -20,6 +23,251 @@ a {
   box-sizing: border-box;
 }
 
+/* USED IN MANY SECTIONS */
+.container-even {
+  background-color: $backgroundEven;
+  .item-headline {
+    color: $textColorHeadlineEven;
+  }
+  .item-paragraph {
+    color: $textColorParagraphEven;
+
+  }
+}
+.container-odd {
+  background-color: $backgroundOdd;
+  .item-headline {
+    color: $textColorHeadlineOdd;
+  }
+  .item-paragraph {
+    color: $textColorParagraphOdd;
+  }
+}
+.container-content {
+  max-width: $contentMaxWidth;
+  margin: 0 auto;
+}
+.section-tag {
+  color: $textColorTag;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: -2.3%;
+}
+.section-headline {   
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+  letter-spacing: -2.3%;
+}
+.section-paragraph {  
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 39.6px;
+  letter-spacing: 0.5px;
+}
+.section-button {
+  border: 0.85px solid $borderButton;
+  border-radius: 0px 17.7px
+}
+
+/* SECTION OUR SERVICES - 3 */ 
+.section-our-services {  
+  .section-our-services-top {
+    max-width: 1090px;
+
+  }
+  .section-our-services-paragraph {
+    width: 573px;
+  }
+  .section-our-services-partners {
+    display: flex;
+    align-items:center;
+  }
+  .section-our-services-partners-item {
+    width: 200px;
+    height: 63.27px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    img {
+      width: 40px;
+      max-height: 40px;
+      margin: auto 10px auto 0;
+    }
+    span {
+      font-weight: 500;
+      font-size: 11.81px;
+      line-height: 17.72px;
+      letter-spacing: -1.9%;
+    }
+  }
+  .section-our-services-cards {
+      margin: 60px;
+      display: flex;      
+    .section-our-services-cards-item {      
+      max-width: 350px;
+      padding: 60px 40px;
+      margin-right: 20px;
+      background: #FFFFFF;
+      box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
+      border-radius: 14px 0px;
+    }
+    .section-our-services-cards-item-icon {
+      height: 40px;
+      mix-blend-mode: multiply;
+      opacity: 0.68;
+    }
+    .section-our-services-cards-item-headline {
+      color: #000514;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 25px;
+    }
+    .section-our-services-cards-item-paragraph {
+      color: #000000;
+      font-size: 11.6px;
+      line-height: 17px;
+    }
+  }
+}
+/* END SECTION OUR SERVICE - 3 */ 
+
+/* SECTION OUR ACHIVEMENTS - 4 */ 
+.section-our-achievements {  
+  .section-our-achievements-top {
+    max-width: 1090px;
+
+  }
+  .section-our-achievements-paragraph {
+    width: 573px;
+  }
+  .section-our-achievements-partners {
+    display: flex;
+    align-items:center;
+  }
+  .section-our-achievements-partners-item {
+    width: 200px;
+    height: 63.27px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    img {
+      width: 40px;
+      max-height: 40px;
+      margin: auto 10px auto 0;
+    }
+    span {
+      font-weight: 500;
+      font-size: 11.81px;
+      line-height: 17.72px;
+      letter-spacing: -1.9%;
+    }
+  }
+  .section-our-achievements-cards {
+      margin: 60px;
+      display: flex;
+      flex-direction: column;
+    .section-our-achievements-cards-item {
+      display: flex;      
+      padding: 60px 40px;
+      margin-right: 20px;
+      background: #FFFFFF;
+      box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
+      border-radius: 14px 0px;
+    }
+    .section-our-achievements-cards-item-icon {
+      height: 20px;
+      width: 250px;
+    }
+    .section-our-achievements-cards-item-number {
+      color: $textColorAchievementNumber;      
+      font-size: 42px;
+      line-height: 50px;
+      padding: 0 10px;
+      margin: 0 20px;
+    }
+    .section-our-achievements-cards-item-paragraph {
+      color: #000000;
+      font-size: 11.6px;
+      line-height: 17px;
+      max-width: 310px;
+    }
+  }
+}
+/* END SECTION OUR ACHIVEMENTS - 4 */ 
+
+/* SECTION OUR PROJECT - 5 */ 
+.section-our-projects {  
+  .section-our-projects-top {
+    max-width: 1090px;
+  }
+  .section-our-projects-paragraph {
+    width: 573px;
+  }
+  .section-our-projects-slider {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .section-our-projects-slider-item {
+    width: 200px;
+  }
+  .section-our-projects-slider-item-image {
+    max-height: 100px;
+    width: 100px;
+  }
+}
+/* END SECTION OUR PROJECT - 5 */ 
+
+/* SECTION CUSTOMER REVIEW - 6 */ 
+.section-customer-review {
+  .section-customer-review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-customer-review-slider { 
+    width: 750px;
+    .section-customer-review-slider-item-quote {
+      color: #000000;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 44px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+    .section-customer-review-slider-item-name {
+      color: #1492FF;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 44px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+    .section-customer-review-slider-item-company {
+      color: #1492FF;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: -2.3%;
+      text-align: center;
+    }
+  }
+}
+/* END SECTION CUSTOMER REVIEW - 6 */
 .section1-container {
   background-color: #000514;
   height: 96px;

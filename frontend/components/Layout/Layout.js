@@ -4,12 +4,10 @@ import styles from './Layout.module.scss'
 function Layout({ title, children }) {
   return (
     <div>
-      <Head>
         <title>{title}</title>
-      </Head>
-      <div className={styles.container}>
-        {children}
-      </div>
+        <div className={styles.container}>
+          {children}
+        </div>
     </div>
   )
 }

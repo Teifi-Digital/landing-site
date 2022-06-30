@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === 'production') {
   API_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:1337'
 }
 
-export {
-  NEXT_URL,
-  API_URL,
-}
+
+module.exports.NEXT_URL = NEXT_URL
+module.exports.API_URL = API_URL
