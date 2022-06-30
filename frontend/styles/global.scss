@@ -24,7 +24,11 @@ a {
 }
 
 /* USED IN MANY SECTIONS */
-.container-even {
+.section-page {
+  position: relative;
+  width: 100%;
+}
+.container-even {  
   background-color: $backgroundEven;
   .item-headline {
     color: $textColorHeadlineEven;
@@ -46,6 +50,10 @@ a {
 .container-content {
   max-width: $contentMaxWidth;
   margin: 0 auto;
+  padding-top: $contentPaddingDesktop;
+  @media (max-width: 600px) {
+    padding-top: $contentPaddingMobile;
+  }
 }
 .section-tag {
   color: $textColorTag;
@@ -53,36 +61,58 @@ a {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: -2.3%;
+  margin: $marginDesktopSmall;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 32px;
+    margin: 0 20px;
+  }
 }
-.section-headline {   
+.section-headline {
   font-weight: 700;
   font-size: 40px;
   line-height: 80px;
   letter-spacing: -2.3%;
+  margin: $marginDesktopSmall;
+  @media (max-width: 600px) {
+    font-size: 32px;
+    line-height: 64px;
+    margin: 0 20px;
+  }
 }
 .section-paragraph {  
   font-weight: 400;
   font-size: 22px;
   line-height: 39.6px;
   letter-spacing: 0.5px;
+  margin: $marginDesktopSmall;
+  @media (max-width: 600px) {
+    font-size: 14px;
+    line-height: 23.8px;
+    margin: 0 20px;
+  }
 }
 .section-button {
   border: 0.85px solid $borderButton;
-  border-radius: 0px 17.7px
+  border-radius: 0px 17.7px;
+  cursor: pointer;
 }
 
 /* SECTION OUR SERVICES - 3 */ 
-.section-our-services {  
+.section-our-services {
   .section-our-services-top {
     max-width: 1090px;
-
   }
   .section-our-services-paragraph {
-    width: 573px;
+    
   }
   .section-our-services-partners {
     display: flex;
-    align-items:center;
+    align-items:center;    
+    margin: $marginDesktopSmall;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
   .section-our-services-partners-item {
     width: 200px;
@@ -94,6 +124,9 @@ a {
     align-items: center;
     padding-left: 5px;
     padding-right: 5px;
+    @media (max-width: 600px) {      
+      margin: 10px 0;
+    }
     img {
       width: 40px;
       max-height: 40px;
@@ -107,15 +140,23 @@ a {
     }
   }
   .section-our-services-cards {
-      margin: 60px;
-      display: flex;      
-    .section-our-services-cards-item {      
+      padding: $contentPaddingMobile;
+      display: flex;
+      @media (max-width: 600px) {
+        flex-direction: column;
+        padding: $contentPaddingMobileSmall;
+      }
+    .section-our-services-cards-item {
       max-width: 350px;
       padding: 60px 40px;
       margin-right: 20px;
       background: #FFFFFF;
       box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
       border-radius: 14px 0px;
+      @media (max-width: 600px) {
+        padding: 20px 20px;
+        margin: 10px 0;
+      }
     }
     .section-our-services-cards-item-icon {
       height: 40px;
@@ -141,11 +182,10 @@ a {
 .section-our-achievements {  
   .section-our-achievements-top {
     max-width: 1090px;
-
   }
-  .section-our-achievements-paragraph {
-    width: 573px;
-  }
+  .section-our-achievements-middle {
+    margin-left: 0;
+  }  
   .section-our-achievements-partners {
     display: flex;
     align-items:center;
@@ -173,35 +213,103 @@ a {
     }
   }
   .section-our-achievements-cards {
-      margin: 60px;
+      margin: 60px 0;
       display: flex;
       flex-direction: column;
+      @media (max-width: 600px) {
+        margin: 40px 0;
+      }
     .section-our-achievements-cards-item {
       display: flex;      
-      padding: 60px 40px;
-      margin-right: 20px;
-      background: #FFFFFF;
-      box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
-      border-radius: 14px 0px;
+      padding: 40px 40px;
+      margin-right: 20px;      
+      @media (max-width: 600px) {
+        padding: 20px 20px;
+        margin: 0;
+      }
     }
     .section-our-achievements-cards-item-icon {
       height: 20px;
       width: 250px;
+      @media (max-width: 600px) {
+        height: 8px;
+        width: 102px;
+      }
+      img {
+        width: 100%;
+      }
     }
     .section-our-achievements-cards-item-number {
-      color: $textColorAchievementNumber;      
+      color: $textColorAchievementNumber;
       font-size: 42px;
       line-height: 50px;
       padding: 0 10px;
       margin: 0 20px;
+      @media (max-width: 600px) {
+        font-size: 29.8974px;
+        line-height: 36px;
+        margin: auto;
+      }
     }
     .section-our-achievements-cards-item-paragraph {
       color: #000000;
       font-size: 11.6px;
       line-height: 17px;
       max-width: 310px;
+      @media (max-width: 600px) {
+        font-size: 12px;
+        line-height: 150%;
+      }
     }
   }
+  .section-our-achievements-bottom-cards {
+    padding: $contentPaddingMobileSmall 0;
+    display: flex;
+    justify-content: center;    
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  .bottom-cards-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 33%;
+    @media (max-width: 600px) {
+      margin-right: 0;
+      width: 100%;
+      bottom: -10%;
+      margin-bottom: 10px;
+    }
+    color: #000000;
+    background: #FFFFFF;
+    box-shadow: 2.81062px 3.37275px 4.68437px 2.2485px rgba(0, 0, 0, 0.04);
+    border-radius: 8.3016px 0px;
+  }
+  .bottom-cards-item-image {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .bottom-cards-item-headline {
+    padding: 20px 40px;    
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: -2.3%;
+    height: 120px;
+  }
+  .bottom-cards-item-paragraph {
+    padding: 0px 40px;
+    font-size: 14px;
+    line-height: 28px;
+    ul {
+      padding: 10px 20px;
+      list-style-position: outside;
+    }
+  }
+}
 }
 /* END SECTION OUR ACHIVEMENTS - 4 */ 
 
@@ -211,26 +319,53 @@ a {
     max-width: 1090px;
   }
   .section-our-projects-paragraph {
-    width: 573px;
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
   .section-our-projects-slider {
     display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding-bottom: 80px;
+    .slick-list {
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      padding-bottom: 20px;
+    }
   }
   .section-our-projects-slider-item {
     width: 200px;
+    height: 150px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    @media (max-width: 600px) {
+      width: 200px;
+      height: 100px;
+    }
   }
   .section-our-projects-slider-item-image {
     max-height: 100px;
-    width: 100px;
+    max-width: 150px;
+    margin: auto;
+    @media (max-width: 600px) {
+      width: 100px;
+      height: 75px;
+    }
   }
 }
 /* END SECTION OUR PROJECT - 5 */ 
 
 /* SECTION CUSTOMER REVIEW - 6 */ 
 .section-customer-review {
+  @media (max-width: 600px) {
+    display: none;
+  }
   .section-customer-review-container {
     display: flex;
     flex-direction: column;
@@ -239,6 +374,7 @@ a {
   }
   .section-customer-review-slider { 
     width: 750px;
+    margin: 0 0 80px 0;
     .section-customer-review-slider-item-quote {
       color: #000000;
       font-style: italic;
@@ -268,6 +404,43 @@ a {
   }
 }
 /* END SECTION CUSTOMER REVIEW - 6 */
+/* RIGHT SIDE SECTION */
+.section-right-side {
+  position: absolute;
+  right: 60px;
+  z-index: 2;
+  @media (max-width: 600px) {
+    display: none;
+  }
+  .section-right-side-container.black {    
+    color: #000514;
+  }
+  .section-right-side-container.white {    
+    color: #FFFFFF;
+  }
+  .container-content {
+    ul {
+      font-size: 11.8px;
+      line-height: 23px;
+      font-weight: 400;
+      letter-spacing: -2.3%;
+      padding: 0px 10px;
+      list-style-position: outside;
+      list-style-type: none;
+      text-align: right;
+      border-right-color: linear-gradient(90.12deg, #0F90FF 8.33%, #005CD9 46.23%);
+      border-right-width: 2px;
+      border-right-style: solid;
+      li {
+        padding: 5px;
+        &.selected {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+/* END RIGHT SIDE SECTION */
 .section1-container {
   background-color: #000514;
   height: 96px;
@@ -295,7 +468,7 @@ a {
       }
     }
     .anchor-active {
-      background: #000514;      
+      background: #000514;
       border: 0.5px solid #1492FF;
       box-shadow: 0px 0px 5px 1px #1492FF;
       border-radius: 0px 14px;

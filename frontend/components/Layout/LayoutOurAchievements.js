@@ -1,20 +1,22 @@
 import { getStrapiMediaNotAPI } from "@/lib/media";
+import LayoutRightSide from "./LayoutRightSide";
 
-function LayoutOurAchievements(props) {console.log('=====', props.data.card2_items)
+function LayoutOurAchievements(props) {
   const { data } = props;  
   return (
-    <div className="section-our-achievements">
+    <div className="section-our-achievements section-page">
       <div className="section-our-achievements-container container-odd">
         <div className="container-content">
+          <LayoutRightSide selected_key = "our-achievements" />
           <div className="section-our-achievements-top">
-                <div className="section-our-achievements-tag section-tag">
-                  <p>{data.tag}</p>
+                <div className="section-our-achievements-tag section-tag" id="our-achievements">
+                  <span>{data.tag}</span>
                 </div>
                 <div className="section-our-achievements-headline item-headline section-headline">
-                  <p>{data.headline}</p>
+                  <span>{data.headline}</span>
                 </div>
                 <div className="section-our-achievements-paragraph item-paragraph section-paragraph">
-                  <p>{data.paragraph}</p>
+                  <span>{data.paragraph}</span>
                 </div>
           </div>
 
@@ -37,21 +39,23 @@ function LayoutOurAchievements(props) {console.log('=====', props.data.card2_ite
           </div> 
 
           <div className="section-our-achievements-bottom">
-                <div className="section-our-achievements-cards">
+                <div className="section-our-achievements-bottom-cards">
                   {data.card2_items.map((item, index) => {
                     return(
-                      <div className="section-our-achievements-cards-item" key={`card1_items_${index}`}>
-                        <p className="section-our-achievements-cards-item-icon">
+                      <div className="bottom-cards-item" key={`card1_items_${index}`}>
+                        <div className="bottom-cards-item-image">
                           <img src={getStrapiMediaNotAPI(item.image.url)} alt={item.image.alternativeText} />
-                        </p>
-                        <p className="section-our-achievements-cards-item-headline">{item.headline}</p>
-                        <p className="section-our-achievements-cards-item-paragraph">
+                        </div>
+                        <div className="bottom-cards-item-headline">{item.headline}</div>
+                        <div className="bottom-cards-item-paragraph">
+                          <ul>
                           {item.line_items.map((line_item, line_items_index) => {
                             return(
-                              <p key={`line_items_${line_items_index}`}>{line_item}</p>
+                              <li key={`line_items_${line_items_index}`}>{line_item}</li>
                             )
                           })}
-                        </p>
+                          </ul>
+                        </div>
 
                       </div>
                     )
