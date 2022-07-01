@@ -10,13 +10,15 @@
     "start": "strapi start",
     "build": "strapi build",
     "_build": "rimraf build .cache && npm run build",
+    "build:watch": "rimraf build .cache && strapi build && npm run watch",
     "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.2.0",
-    "@strapi/plugin-users-permissions": "4.2.0",
-    "@strapi/plugin-i18n": "4.2.0",
+    "@strapi/plugin-i18n": "4.2.2",
+    "@strapi/plugin-users-permissions": "4.2.2",
+    "@strapi/strapi": "4.2.2",
+    "joi": "^17.6.0",
     "pg": "8.6.0"
   },
   "author": {

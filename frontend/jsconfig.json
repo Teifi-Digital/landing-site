@@ -5,8 +5,10 @@
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
       "@/config/*": ["config/*"],
+      "@/lib/*": ["lib/*"],
       "@/utilities/*": ["utilities/*"],
-      "@/services/*": ["services/*"]
+      "@/services/*": ["services/*"],
+      "@/translations/*": ["translations/*"],
     }
   }
 }

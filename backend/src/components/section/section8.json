@@ -15,10 +15,10 @@
     "paragraph": {
       "type": "text"
     },
-    "input_items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.input"
+    "form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form.form"
     }
   }
 }

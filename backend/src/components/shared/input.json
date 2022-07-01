@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_inputs",
   "info": {
-    "displayName": "input"
+    "displayName": "input",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,19 +19,25 @@
       "type": "boolean",
       "default": false
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "text",
-        "email",
-        "phone"
-      ]
-    },
     "autocomplete": {
       "type": "string"
     },
     "max_length": {
       "type": "integer"
+    },
+    "rows": {
+      "type": "integer",
+      "default": 1
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "tel",
+        "textarea"
+      ],
+      "default": "text"
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_forms",
+  "info": {
+    "displayName": "form"
+  },
+  "options": {},
+  "attributes": {
+    "input_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.input"
+    },
+    "form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form.form"
+    }
+  }
+}
