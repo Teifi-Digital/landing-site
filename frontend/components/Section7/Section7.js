@@ -13,7 +13,7 @@ function Section7({ data }) {
 
   return (
     <div className='section7-container'>
-      <span class='anchor' id={anchor}></span>
+      <span className='anchor' id={anchor}></span>
       <LayoutRightSide
         selected_key={anchor}
         anchor_items={anchor_items}

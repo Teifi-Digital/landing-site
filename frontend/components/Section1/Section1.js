@@ -53,7 +53,11 @@ function Section1({ data }) {
           {anchor_items.map(({ anchor, label, icon }, index) => {
             const added = anchor === anchorActive ? 'menu-item-active' : ''
             return (
-              <div className={`menu-item ${added}`} onClick={() => changeBurger(anchor)}>
+              <div 
+                className={`menu-item ${added}`} 
+                onClick={() => changeBurger(anchor)} 
+                key={`burger-item-${index}`}
+              >
                 <DynamicFaIcon name={icon} />
                 <span>{label}</span>
               </div>

@@ -28,12 +28,59 @@ module.exports = {
     try {
       const { handle } = ctx.params
 
-      const populate = getFullPopulateObject('api::page.page', 20).populate
-      delete populate.section_items.populate.form.populate.submissions
+      const populate = {
+        "section_items": {
+          "populate": {
+            "logo": true,
+            "button": {
+              "populate": {
+                "icon": true
+              }
+            },
+            "button_items": {
+              "populate": {
+                "icon": true
+              }
+            },
+            "card1_items": {
+              "populate": {
+                "icon": true
+              }
+            },
+            "achivement_items": {
+              "populate": {
+                "icon": true
+              }
+            },
+            "card2_items": {
+              "populate": {
+                "image": true
+              }
+            },
+            "logo_items": true,
+            "quote_items": true,
+            "card3_items": true,
+            "form": {
+              "populate": {
+                "input_items": true
+              }
+            },
+            "privacy_policy": true,
+            "social_items": {
+              "populate": {
+                "icon": true
+              }
+            }
+          }
+        }
+      }
 
       const entry = await strapi.db
         .query('api::page.page')
-        .findOne({ where: { handle }, populate })
+        .findOne({
+          where: { handle },
+          populate
+        })
 
       return transformResponse(entry.section_items)
 
@@ -49,12 +96,14 @@ module.exports = {
     let entryForm
 
     try {
-      const populate = getFullPopulateObject('api::form.form', 20).populate
-      delete populate.submissions
-
       entryForm = await strapi.db
         .query('api::form.form')
-        .findOne({ where: { handle: formHandle }, populate })
+        .findOne({ 
+          where: { handle: formHandle },
+          populate: {
+            "input_items": true
+          }
+        })
 
       if (!entryForm) {
         throw new Error('entryForm.notFound')

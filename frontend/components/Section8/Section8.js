@@ -26,7 +26,7 @@ function Section8({ data }) {
     const submitData = {}
     inputItems.forEach(x => submitData[x.name] = x.value)
     const res = await BaseService.post('/management/submissions/contact', submitData)
-    if(res.ok && res.data.id) {
+    if(res?.ok && res?.data?.id) {
       toast.success(TRANS_MESSAGE['success_form_submitted'])
     } else {
       toast.error(res?.error?.message || TRANS_MESSAGE['error_default_message'])
