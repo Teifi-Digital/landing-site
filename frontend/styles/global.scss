@@ -159,12 +159,11 @@ a {
     .section-our-services-cards-item {
       max-width: 350px;
       padding: 50px 40px;
-      margin-right: 20px;
       background: #FFFFFF;
       box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
       border-radius: 14px 0px;
       @media (max-width: 600px) {
-        padding: 40px 20px;
+        margin-right: 0;
         margin-bottom: 20px;
       }
     }
