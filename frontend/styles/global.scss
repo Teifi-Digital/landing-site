@@ -60,7 +60,7 @@ a {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: -2.3%;  
-  margin: 0 40px;
+  margin: 0 40px 0 12%;
   @media (max-width: 600px) {
     font-size: 16px;
     line-height: 32px;
@@ -72,7 +72,7 @@ a {
   font-size: 40px;
   line-height: 80px;
   letter-spacing: -2.3%;  
-  margin: 0 40px;
+  margin: 0 40px 0 12%;
   @media (max-width: 600px) {
     font-size: 32px;
     line-height: 64px;
@@ -84,7 +84,7 @@ a {
   font-size: 22px;
   line-height: 39.6px;
   letter-spacing: 0.5px;
-  margin: 0 40px;
+  margin: 0 40px 0 12%;
   max-width: 537px;
   @media (max-width: 600px) {
     font-size: 14px;
@@ -102,41 +102,51 @@ a {
 .section-our-services {
   .section-our-services-top {
     max-width: 1090px;
-  }
-  .section-our-services-paragraph {
-    
-  }
+  }  
   .section-our-services-partners {
     display: flex;
-    align-items:center;    
+    align-items:center;
     margin: $marginDesktopSmall;
-    @media (max-width: 600px) {
-      flex-direction: column;
+    margin: 20px 40px 20px 12%;
+    @media (max-width: 600px) {      
+      margin: 20px;
     }
   }
   .section-our-services-partners-item {
-    width: 200px;
+    position: relative;
     height: 63.27px;
     margin-right: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    @media (max-width: 600px) {      
-      margin: 10px 0;
+    padding: 0 5px;
+    min-width: 150px;
+    @media (max-width: 600px) {
+      min-width: 100px;
+      height: 44px;
+      margin-right: 10px;
     }
     img {
+      margin: auto;
       width: 40px;
       max-height: 40px;
-      margin: auto 10px auto 0;
+      margin: auto 0;
+      @media (max-width: 600px) {
+        margin: auto;
+        max-width: 20px;
+      }
     }
     span {
+      padding: 10px;
       font-weight: 500;
       font-size: 11.81px;
       line-height: 17.72px;
       letter-spacing: -1.9%;
+      @media (max-width: 600px) {
+        padding: 0 5px;
+        font-size: 8.3px;
+      }
     }
   }
   .section-our-services-cards {
@@ -148,14 +158,14 @@ a {
       }
     .section-our-services-cards-item {
       max-width: 350px;
-      padding: 60px 40px;
+      padding: 50px 40px;
       margin-right: 20px;
       background: #FFFFFF;
       box-shadow: 3.5px 4px 5px 2.7px rgba(0, 0, 0, 0.04);
       border-radius: 14px 0px;
       @media (max-width: 600px) {
-        padding: 20px 20px;
-        margin: 10px 0;
+        padding: 40px 20px;
+        margin-bottom: 20px;
       }
     }
     .section-our-services-cards-item-icon {
@@ -168,11 +178,21 @@ a {
       font-weight: 700;
       font-size: 21px;
       line-height: 25px;
+      margin: 15px auto 30px auto;
+      @media (max-width: 600px) {
+        font-size: 14.66px;
+        line-height: 18px;
+        margin: 10px auto 20px auto;
+      }
     }
     .section-our-services-cards-item-paragraph {
       color: #000000;
       font-size: 11.6px;
-      line-height: 17px;
+      line-height: 17px;      
+      @media (max-width: 600px) {
+        font-size: 12px;
+        line-height: 17px;
+      }
     }
   }
 }
@@ -180,11 +200,19 @@ a {
 
 /* SECTION OUR ACHIVEMENTS - 4 */ 
 .section-our-achievements {
+  background-color: $backgroundOdd;
   .section-our-achievements-container {
+    width: 80%;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     background-color: $backgroundOdd;
     .container-content {
       background-color: #FFFFFF;
     }
+  }
+  .section-right-side .container-content {
+    background-color: transparent;
   }
   .section-our-achievements-top {
     max-width: 1090px;
@@ -222,6 +250,7 @@ a {
       margin: 60px 0;
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       @media (max-width: 600px) {
         margin: 40px 0;
       }
@@ -235,12 +264,10 @@ a {
       }
     }
     .section-our-achievements-cards-item-icon {
-      height: 20px;
-      width: 250px;
-      @media (max-width: 600px) {
-        height: 8px;
-        width: 102px;
-      }
+      width: 30%;
+      line-height: 50px;
+      display: flex;
+      justify-items: center;
       img {
         width: 100%;
       }
@@ -251,6 +278,7 @@ a {
       line-height: 50px;
       padding: 0 10px;
       margin: 0 20px;
+      
       @media (max-width: 600px) {
         font-size: 29.8974px;
         line-height: 36px;
@@ -261,17 +289,24 @@ a {
       color: #000000;
       font-size: 11.6px;
       line-height: 17px;
-      max-width: 310px;
+      max-width: 50%;
       @media (max-width: 600px) {
         font-size: 12px;
         line-height: 150%;
       }
     }
   }
+  .section-our-achievements-bottom {
+    margin: 0 40px 0 12%;
+    width: 100%;
+    @media (max-width: 600px) {
+      margin: auto 0;
+    }
+  }
   .section-our-achievements-bottom-cards {
     padding: $contentPaddingMobileSmall;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     @media (max-width: 600px) {
       flex-direction: column;
     }
@@ -284,7 +319,7 @@ a {
       margin-right: 0;
       width: 100%;
       bottom: -10%;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
     color: #000000;
     background: #FFFFFF;
@@ -299,7 +334,7 @@ a {
     }
   }
   .bottom-cards-item-headline {
-    padding: 20px 40px;    
+    padding: 20px 40px;
     font-size: 18px;
     line-height: 36px;
     font-weight: 700;
@@ -334,6 +369,7 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    margin: 0 12%;
     padding-bottom: 80px;
     .slick-list {
       width: 100%;
@@ -351,7 +387,7 @@ a {
     flex-direction: row;
     margin: auto;
     @media (max-width: 600px) {
-      width: 200px;
+      width: 150px;
       height: 100px;
     }
   }
@@ -381,6 +417,15 @@ a {
   .section-customer-review-slider { 
     width: 750px;
     margin: 0 0 80px 0;
+    .slick-dots {
+      li {
+        width: 10px !important;
+        height: 10px !important;
+      }
+      .slick-active * {
+      background-color: #343434 !important;
+      }
+    }
     .section-customer-review-slider-item-quote {
       color: #000000;
       font-style: italic;

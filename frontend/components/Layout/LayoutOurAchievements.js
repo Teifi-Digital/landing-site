@@ -25,12 +25,11 @@ function LayoutOurAchievements(props) {
                   {data.achivement_items.map((item, index) => {
                     return(
                       <div className="section-our-achievements-cards-item" key={`card1_items_${index}`}>
-                        <p className="section-our-achievements-cards-item-icon">
+                        <div className="section-our-achievements-cards-item-icon">
                           <img src={getStrapiMediaNotAPI(item.icon.url)} alt={item.icon.alternativeText} />
-                        </p>
-                        <p className="section-our-achievements-cards-item-number">{item.number}</p>
-                        <p className="section-our-achievements-cards-item-paragraph">{item.paragraph}</p>
-
+                        </div>
+                        <div className="section-our-achievements-cards-item-number">{item.number}</div>
+                        <div className="section-our-achievements-cards-item-paragraph">{item.paragraph}</div>
                       </div>
                     )
                   })

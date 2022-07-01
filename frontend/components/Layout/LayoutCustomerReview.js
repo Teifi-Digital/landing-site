@@ -17,6 +17,18 @@ function LayoutCustomerReview(props) {
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: true,
+        customPaging: dots => (
+          <div
+          style={{
+            backgroundColor: "#D9D9D9",
+            borderRadius: "10px",
+            padding: "4px",
+            width: "2px"
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {""} </ul>
+        </div>
+        )
     },
     className: 'section-customer-review-slider',
     }

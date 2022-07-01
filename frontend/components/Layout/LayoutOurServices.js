@@ -37,11 +37,11 @@ function LayoutOurServices(props) {
                   {data.card1_items.map((item, index) => {
                     return(
                       <div className="section-our-services-cards-item" key={`card1_items_${index}`}>
-                        <p className="section-our-services-cards-item-icon">
+                        <div className="section-our-services-cards-item-icon">
                           <img src={getStrapiMediaNotAPI(item.icon.url)} alt={item.icon.alternativeText} />
-                        </p>
-                        <span className="section-our-services-cards-item-headline">{item.headline}</span>
-                        <p className="section-our-services-cards-item-paragraph">{item.paragraph}</p>
+                        </div>
+                        <div className="section-our-services-cards-item-headline"><span>{item.headline}</span></div>
+                        <div className="section-our-services-cards-item-paragraph">{item.paragraph}</div>
 
                       </div>
                     )
