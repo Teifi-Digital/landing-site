@@ -17,6 +17,10 @@ export default function Home({ data }) {
         <ToastContainer />
         <Section1 data={data[0]} />
         <Section2 data={data[1]} />
+        <LayoutOurServices data={data[2]} />
+        <LayoutOurAchievements data={data[3]} />
+        <LayoutOurProjects data={data[4]} />
+        <LayoutCustomerReview data={data[5]} />
         <Section7 data={data[6]} />
         <Section8 data={data[7]} />
         {/* <LayoutOurServices data={data[2]} />
@@ -24,7 +28,7 @@ export default function Home({ data }) {
       <LayoutOurProjects data={data[4]} />
       <LayoutCustomerReview data={data[5]} /> */}
       </div>
-    </Layout>
+    </Layout>    
   )
 }
 
