@@ -12,20 +12,19 @@ import LayoutCustomerReview from '@/components/Layout/LayoutCustomerReview';
 
 export default function Home({ data }) {
   return (
-    <>
-    <Layout title="Teifi Digital">
-      <ToastContainer />
-      <ToastContainer />
-      <Section1 data={data[0]} />
-      <Section2 data={data[1]} />
-      <Section7 data={data[6]} />
-      <Section8 data={data[7]} />
+    <Layout title={'Teifi Site'}>
+      <div className='home-container'>
+        <ToastContainer />
+        <Section1 data={data[0]} />
+        <Section2 data={data[1]} />
+        <Section7 data={data[6]} />
+        <Section8 data={data[7]} />
+        {/* <LayoutOurServices data={data[2]} />
+      <LayoutOurAchievements data={data[3]} />
+      <LayoutOurProjects data={data[4]} />
+      <LayoutCustomerReview data={data[5]} /> */}
+      </div>
     </Layout>
-    <LayoutOurServices data={data[2]} />    
-    <LayoutOurAchievements data={data[3]} />    
-    <LayoutOurProjects data={data[4]} />    
-    <LayoutCustomerReview data={data[5]} />    
-    </>
   )
 }
 
