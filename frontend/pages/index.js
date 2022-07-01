@@ -14,15 +14,15 @@ export default function Home({ data }) {
   return (
     <Layout title={'Teifi Site'}>
       <div className='home-container'>
-        <ToastContainer />
+        <ToastContainer autoClose={999999999999} />
         <Section1 data={data[0]} />
         <Section2 data={data[1]} />
         <Section7 data={data[6]} />
         <Section8 data={data[7]} />
         {/* <LayoutOurServices data={data[2]} />
-      <LayoutOurAchievements data={data[3]} />
-      <LayoutOurProjects data={data[4]} />
-      <LayoutCustomerReview data={data[5]} /> */}
+        <LayoutOurAchievements data={data[3]} />
+        <LayoutOurProjects data={data[4]} />
+        <LayoutCustomerReview data={data[5]} /> */}
       </div>
     </Layout>
   )

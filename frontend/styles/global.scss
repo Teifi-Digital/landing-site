@@ -273,10 +273,13 @@ a {
 
 .home-container {
   margin: 0 auto;
-  width: 1440px;
-  max-width: 1440px;
-  @media (max-width: 1440px) {
+  width: $siteMaxWidth;
+  max-width: $siteMaxWidth;
+  @media (max-width: $siteMaxWidth) {
     width: 100%;
+  }
+  .Toastify__toast-container {
+    z-index: 9999999999;
   }
 }
 
@@ -286,6 +289,7 @@ $section1BurgerMenuPrimaryColor: #000514;
   position: fixed;
   z-index: 99999;
   width: 100%;
+  max-width: $siteMaxWidth;
   height: 96px;
   background-color: #000514;
   display: flex;
@@ -617,7 +621,7 @@ $section2PaddingLeft_2: 41px;
     }
   }
   @media (max-width: 992px) {
-    height: 2570px;
+    height: 2430px;
     .top-block {
       margin-left: 20px;
       margin-top: 47px;
@@ -751,6 +755,60 @@ $section2PaddingLeft_2: 41px;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    height: 1450px;
+    display: block;
+    .left-block {
+      margin-top: 0;
+      padding-top: 74px;
+    }
+    .right-form {
+      margin-left: 175px;
+    }
+  }
+  @media (max-width: 992px) {
+    height: 1330px;
+    .left-block {
+      margin-left: 20px;
+      padding-top: 47px;
+      .tag {
+        font-size: 16px;
+      }
+      .headline {
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 3px;
+        margin-bottom: 15px;
+      }
+      .paragraph {
+        width: 335px;
+        font-size: 14px;
+        line-height: 170%; 
+      }
+    }
+    .right-form {
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .right-form {
+      width: 90%;
+      margin-left: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      .input-container {
+        input {
+          width: 100%;
+        }
+        .input-textarea-container {
+          textarea {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
