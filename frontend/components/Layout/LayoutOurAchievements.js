@@ -2,12 +2,17 @@ import { getStrapiMediaNotAPI } from "@/lib/media";
 import LayoutRightSide from "./LayoutRightSide";
 
 function LayoutOurAchievements(props) {
-  const { data } = props;  
+  const { data } = props;
+
   return (
-    <div className="section-our-achievements section-page" id="our-achievements">
+    <div className="section-our-achievements section-page" id={data.anchor}>
       <div className="section-our-achievements-container container-odd">
         <div className="container-content">
-          <LayoutRightSide selected_key = "our-achievements" />
+          <LayoutRightSide 
+            selected_key={data.anchor}
+            anchor_items={data.anchor_items}
+            color={'black'} 
+          />
           <div className="section-our-achievements-top">
                 <div className="section-our-achievements-tag section-tag" >
                   <span>{data.tag}</span>

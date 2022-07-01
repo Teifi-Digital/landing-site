@@ -1,7 +1,8 @@
 {
   "collectionName": "components_section_section5s",
   "info": {
-    "displayName": "section5"
+    "displayName": "section5",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,14 +16,21 @@
       "type": "text"
     },
     "logo_items": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "anchor_items": {
+      "type": "json"
     }
   }
 }

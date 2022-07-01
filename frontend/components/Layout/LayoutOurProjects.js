@@ -7,6 +7,7 @@ import { getStrapiMediaNotAPI } from "@/lib/media";
 
 function LayoutOurProjects(props) {
   const { data } = props;
+
   let sliderData = {
     data: data?.logo_items || [],
     settings: {
@@ -33,10 +34,14 @@ function LayoutOurProjects(props) {
     className: 'section-our-projects-slider',
     }
   return (
-    <div className="section-our-projects section-page" id="our-projects">
+    <div className="section-our-projects section-page" id={data.anchor}>
       <div className="section-our-projects-container container-even">
         <div className="container-content">
-            <LayoutRightSide selected_key = "our-projects" />
+            <LayoutRightSide 
+              selected_key={data.anchor}
+              anchor_items={data.anchor_items}
+              color={'white'} 
+            />
             <div className="section-our-projects-top">
                   <div className="section-our-projects-tag section-tag">
                     <span>{data.tag}</span>

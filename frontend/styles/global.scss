@@ -27,6 +27,7 @@ a {
 .section-page {
   position: relative;
   width: 100%;
+  scroll-margin-top: 95px;
 }
 .container-even {
   background-color: $backgroundEven;
@@ -462,10 +463,13 @@ a {
 
 .home-container {
   margin: 0 auto;
-  width: 1440px;
-  max-width: 1440px;
-  @media (max-width: 1440px) {
+  width: $siteMaxWidth;
+  max-width: $siteMaxWidth;
+  @media (max-width: $siteMaxWidth) {
     width: 100%;
+  }
+  .Toastify__toast-container {
+    z-index: 9999999999;
   }
 }
 
@@ -518,6 +522,7 @@ $section1BurgerMenuPrimaryColor: #000514;
   position: fixed;
   z-index: 99999;
   width: 100%;
+  max-width: $siteMaxWidth;
   height: 96px;
   background-color: #000514;
   display: flex;
@@ -539,7 +544,7 @@ $section1BurgerMenuPrimaryColor: #000514;
       text-align: center;
       line-height: 38px;
       cursor: pointer;
-      a {
+      span {
         font-size: 14px;
         line-height: 150%;
         letter-spacing: -0.019em;
@@ -608,7 +613,7 @@ $section1BurgerMenuPrimaryColor: #000514;
       }
       .bm-item-list {
         color: #b8b7ad;
-        padding-top: 86px;
+        padding-top: 20px;
         padding-left: 20px;
       }
       .bm-item {
@@ -623,6 +628,18 @@ $section1BurgerMenuPrimaryColor: #000514;
           letter-spacing: -0.019em;
           font-feature-settings: 'tnum' on, 'lnum' on;
         }
+      }
+      .divide {
+        padding: 0;
+        margin-left: -20px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+        background: #000514;
+        border-bottom: 0.2px solid #1492FF;
+        box-shadow: 0px 0px 4px #1492FF;
+      }
+      .menu-item-active {
+        color: #1492FF;
       }
       .bm-overlay {
         z-index: 1000;
@@ -764,9 +781,18 @@ $section2PaddingLeft_2: 41px;
   height: 1142px;
   background-image: url('/images/section7-bg.jpg');
   overflow: hidden;
+  position: relative;
+
+  .anchor {
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+  }
+
   .top-block {
     margin-left: 175px;
-    margin-top: 51px;
+    padding-top: 51px;
     .tag {
       font-weight: 400;
       font-size: 18px;
@@ -838,6 +864,9 @@ $section2PaddingLeft_2: 41px;
       }
     }
   }
+  .section-right-side {
+    top: 80px;
+  }
 
   @media (max-width: 1199px) {
     height: 1500px;
@@ -849,7 +878,7 @@ $section2PaddingLeft_2: 41px;
     }
   }
   @media (max-width: 992px) {
-    height: 2570px;
+    height: 2430px;
     .top-block {
       margin-left: 20px;
       margin-top: 47px;
@@ -983,6 +1012,105 @@ $section2PaddingLeft_2: 41px;
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    height: 1450px;
+    display: block;
+    .left-block {
+      margin-top: 0;
+      padding-top: 74px;
+    }
+    .right-form {
+      margin-left: 175px;
+    }
+  }
+  @media (max-width: 992px) {
+    height: 1330px;
+    .left-block {
+      margin-left: 20px;
+      padding-top: 47px;
+      .tag {
+        font-size: 16px;
+      }
+      .headline {
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 3px;
+        margin-bottom: 15px;
+      }
+      .paragraph {
+        width: 335px;
+        font-size: 14px;
+        line-height: 170%; 
+      }
+    }
+    .right-form {
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .right-form {
+      width: 90%;
+      margin-left: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      .input-container {
+        input {
+          width: 100%;
+        }
+        .input-textarea-container {
+          textarea {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section9-container {
+  height: 127px;
+  background: #000514;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 175px;
+  
+  .privacy-policy,
+  .copyright {
+    font-weight: 400;
+    font-size: 17.5069px;
+    line-height: 150%;
+    letter-spacing: 0.237418px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
+
+  .social {
+    .social-item {
+      display: inline-block;
+      padding: 0 15px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 992px) {
+    .social {
+      .social-item {
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    display: block;
+    padding-top: 38px;
+    .social {
+      float: right;
+      margin-top: -9px;
     }
   }
 }
