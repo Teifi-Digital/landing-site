@@ -1,10 +1,11 @@
+import BaseService from '@/services/base'
+import { ToastContainer } from 'react-toastify'
 import Layout from '@/components/Layout/Layout'
 import Section1 from '@/components/Section1/Section1'
 import Section2 from '@/components/Section2/Section2'
 import Section7 from '@/components/Section7/Section7'
 import Section8 from '@/components/Section8/Section8'
-import BaseService from '@/services/base'
-import { ToastContainer } from 'react-toastify'
+import Section9 from '@/components/Section9/Section9'
 import LayoutOurServices from '@/components/Layout/LayoutOurServices';
 import LayoutOurProjects from '@/components/Layout/LayoutOurProjects';
 import LayoutOurAchievements from '@/components/Layout/LayoutOurAchievements';
@@ -14,7 +15,7 @@ export default function Home({ data }) {
   return (
     <Layout title={'Teifi Site'}>
       <div className='home-container'>
-        <ToastContainer autoClose={999999999999} />
+        <ToastContainer position='bottom-center' />
         <Section1 data={data[0]} />
         <Section2 data={data[1]} />
         <LayoutOurServices data={data[2]} />
@@ -23,10 +24,7 @@ export default function Home({ data }) {
         <LayoutCustomerReview data={data[5]} />
         <Section7 data={data[6]} />
         <Section8 data={data[7]} />
-        {/* <LayoutOurServices data={data[2]} />
-        <LayoutOurAchievements data={data[3]} />
-        <LayoutOurProjects data={data[4]} />
-        <LayoutCustomerReview data={data[5]} /> */}
+        <Section9 data={data[8]} />
       </div>
     </Layout>    
   )

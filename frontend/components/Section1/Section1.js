@@ -2,12 +2,22 @@ import React, { useState } from 'react'
 import { API_URL } from '@/config/index'
 import { slide as Menu } from 'react-burger-menu'
 import { FaNetworkWired, FaInfoCircle, FaUser } from 'react-icons/fa'
+import { useRouter } from 'next/router'
+import DynamicFaIcon from '@/components/DynamicFaIcon/DynamicFaIcon'
 
-function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } } }) {
-  const [anchorActive, setAnchorActive] = useState('contact')
+function Section1({ data }) {
+  const router = useRouter()
+  const { anchor_items, logo, logo: { url, alternativeText } } = data
+  const [anchorActive, setAnchorActive] = useState('')
+
 
   const changeAnchor = (anchor) => {
-    // console.log('→ anchor', anchor)
+    router.push(`#${anchor}`)
+    setAnchorActive(anchor)
+  }
+
+  const changeBurger = (anchor) => {
+    router.push(`#${anchor}`)
     setAnchorActive(anchor)
   }
 
@@ -18,20 +28,17 @@ function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } }
       </div>
 
       <div className='anchor'>
-        {anchor_items.map((anchor, index) => {
+        {anchor_items.map(({ anchor, label }, index) => {
           const added = anchor === anchorActive ? 'anchor-active' : ''
           return (
             <div key={`anchor_${index}`} className={`anchor-item ${added}`} onClick={() => changeAnchor(anchor)}>
-              <a href={`#${anchor}`}>{anchor}</a>
+              <span>{label}</span>
             </div>
           )
         })}
       </div>
 
       <div className="burger">
-        {/* <svg width={20} height={15} viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 14H19M1 7.5H19M1 1H19" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg> */}
         <Menu
           customBurgerIcon={
             <svg width={20} height={15} viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,20 +46,19 @@ function Section1({ data: { anchor_items, logo, logo: { url, alternativeText } }
             </svg>
           }
         >
-          <a className="menu-item" href="/">
-            <FaNetworkWired />
-            <span>Work</span>
-          </a>
-
-          <a className="menu-item" href="/burgers">
-            <FaInfoCircle />
-            <span>About</span>
-          </a>
-
-          <a className="menu-item" href="/pizzas">
-            <FaUser />
-            <span>Contact</span>
-          </a>
+          <div className='logo'>
+            <img src={`${API_URL}${url}`} alt={alternativeText} />
+          </div>
+          <div className='divide'></div>
+          {anchor_items.map(({ anchor, label, icon }, index) => {
+            const added = anchor === anchorActive ? 'menu-item-active' : ''
+            return (
+              <div className={`menu-item ${added}`} onClick={() => changeBurger(anchor)}>
+                <DynamicFaIcon name={icon} />
+                <span>{label}</span>
+              </div>
+            )
+          })}
 
         </Menu>
       </div>

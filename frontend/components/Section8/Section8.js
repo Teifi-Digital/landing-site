@@ -6,7 +6,7 @@ import { TRANS_MESSAGE } from '@/translations/en'
 
 function Section8({ data }) {
   const ref = useRef(null)
-  const { tag, headline, paragraph, form: { input_items } } = data
+  const { tag, headline, paragraph, form: { input_items }, anchor } = data
   const [inputItems, setInputItems] = useState(input_items.map(x => ({ ...x, value: '' })))
 
   const handleInputChange = (newValue, index) => {
@@ -35,7 +35,7 @@ function Section8({ data }) {
   }
 
   return (
-    <div className='section8-container'>
+    <div className='section8-container' id={anchor}>
       <LoadingBar color='#1492FF' ref={ref} />
       <div className='left-block'>
         <div className='tag'>{tag}</div>
