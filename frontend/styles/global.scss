@@ -462,12 +462,14 @@ a {
 
 
 .home-container {
+  overflow-x: hidden;
   margin: 0 auto;
   width: $siteMaxWidth;
   max-width: $siteMaxWidth;
   @media (max-width: $siteMaxWidth) {
     width: 100%;
   }
+
   .Toastify__toast-container {
     z-index: 9999999999;
   }
@@ -658,15 +660,17 @@ $section1BurgerMenuPrimaryColor: #000514;
 $section2PaddingLeft: 175px;
 $section2PaddingLeft_2: 41px;
 .section2-container {
-  height: 657px;
+  height: fit-content;
   background: #000514;
+  padding-bottom: 75px;
   
   .headline {
     padding-top: 143px;
     margin-left: $section2PaddingLeft;
-    width: 407px;
+    margin-right: 20px;
+    width: auto;
     font-weight: 700;
-    font-size: 39.619px;
+    font-size: 29.619px;
     line-height: 150%;
     letter-spacing: 1.03496px;
     font-feature-settings: 'tnum' on, 'lnum' on;
@@ -728,8 +732,9 @@ $section2PaddingLeft_2: 41px;
   .button {
     margin-top: 57px;
     margin-left: $section2PaddingLeft;
-
-    width: 198.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
     height: 55.04px;
     background: #1492FF;    
     border: 1.35197px solid #1492FF;
@@ -746,6 +751,7 @@ $section2PaddingLeft_2: 41px;
       margin-top: 18px;
       width: 147.19px;
       height: 41px;
+      width: fit-content;
     }
 
     .label {
@@ -949,7 +955,7 @@ $section2PaddingLeft_2: 41px;
     margin-top: 40px;
     padding-top: 49px;
     padding-left: 42px;
-    width: 533px;
+    width: auto;
     height: 825px;
     background: #FFFFFF;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.05);
