@@ -462,6 +462,7 @@ a {
 
 
 .home-container {
+  overflow-x: hidden;
   margin: 0 auto;
   width: $siteMaxWidth;
   max-width: $siteMaxWidth;
@@ -660,7 +661,8 @@ $section2PaddingLeft_2: 41px;
 .section2-container {
   height: 657px;
   background: #000514;
-
+  padding-bottom: 75px;
+  
   .headline {
     padding-top: 143px;
     margin-left: $section2PaddingLeft;
@@ -729,7 +731,7 @@ $section2PaddingLeft_2: 41px;
     margin-top: 57px;
     margin-left: $section2PaddingLeft;
 
-    width: 198.95px;
+    width: 300px;
     height: 55.04px;
     background: #1492FF;    
     border: 1.35197px solid #1492FF;
