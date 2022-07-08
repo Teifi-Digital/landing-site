@@ -15,7 +15,8 @@ body {
 }
 
 textarea,
-input {
+input,
+button {
   font-family: $bodyFontFamily;
 }
 
@@ -123,6 +124,7 @@ a {
     }
   }
   .section-our-services-partners-item {
+    font-family: $boldFontFamily;
     position: relative;
     height: 63.27px;
     margin-right: 60px;
@@ -132,6 +134,8 @@ a {
     align-items: center;
     padding: 0 5px;
     min-width: 150px;
+    background-color: unset;
+    color: black;
     @media (max-width: 600px) {
       min-width: 100px;
       height: 44px;
