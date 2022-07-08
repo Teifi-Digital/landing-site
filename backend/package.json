@@ -8,6 +8,7 @@
     "watch": "nodemon node_modules/@strapi/strapi/bin/strapi.js develop",
     "watch-admin": "strapi develop --watch-admin",
     "start": "strapi start",
+    "_start": "npm run _build && npm run start",
     "build": "strapi build",
     "_build": "rimraf build .cache && npm run build",
     "build:watch": "rimraf build .cache && strapi build && npm run watch",
