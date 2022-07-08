@@ -6,6 +6,12 @@
 }
 
 @font-face {
+  font-family: 'GT Maru Bold';
+  src: url('/fonts/GT-Maru-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'GT Maru Mono';
   src: url('/fonts/GT-Maru-Mono-Regular.woff') format('woff'),
     url('/fonts/GT-Maru-Mono-Regular-Oblique.woff') format('woff'),
