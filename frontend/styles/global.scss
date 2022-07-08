@@ -1075,7 +1075,9 @@ $section2PaddingLeft_2: 41px;
   @media (max-width: 992px) {
     height: 1330px;
     .left-block {
+      width: unset;
       margin-left: 20px;
+      margin-right: 20px;
       padding-top: 47px;
       .tag {
         font-size: 16px;
