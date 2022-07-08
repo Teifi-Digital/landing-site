@@ -70,7 +70,8 @@ module.exports = {
               "populate": {
                 "icon": true
               }
-            }
+            },
+            "emphasized_items": true
           }
         }
       }

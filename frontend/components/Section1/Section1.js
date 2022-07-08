@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { API_URL } from '@/config/index'
 import { slide as Menu } from 'react-burger-menu'
-import { FaNetworkWired, FaInfoCircle, FaUser } from 'react-icons/fa'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import DynamicFaIcon from '@/components/DynamicFaIcon/DynamicFaIcon'
 
@@ -24,7 +24,9 @@ function Section1({ data }) {
   return (
     <div className='section1-container'>
       <div className='logo'>
-        <img src={`${API_URL}${url}`} alt={alternativeText} />
+        <Image src={`${API_URL}${url}`} alt={alternativeText}
+          width="100%" height="100%" layout="responsive" objectFit="contain"
+        />
       </div>
 
       <div className='anchor'>
@@ -46,16 +48,18 @@ function Section1({ data }) {
             </svg>
           }
         >
-          <div className='logo'>
-            <img src={`${API_URL}${url}`} alt={alternativeText} />
+          <div className='burger-logo'>
+            <Image src={`${API_URL}${url}`} alt={alternativeText}
+              width="100%" height="100%" layout="responsive" objectFit="contain"
+            />
           </div>
           <div className='divide'></div>
           {anchor_items.map(({ anchor, label, icon }, index) => {
             const added = anchor === anchorActive ? 'menu-item-active' : ''
             return (
-              <div 
-                className={`menu-item ${added}`} 
-                onClick={() => changeBurger(anchor)} 
+              <div
+                className={`menu-item ${added}`}
+                onClick={() => changeBurger(anchor)}
                 key={`burger-item-${index}`}
               >
                 <DynamicFaIcon name={icon} />

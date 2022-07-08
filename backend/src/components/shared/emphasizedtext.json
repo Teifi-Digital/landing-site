@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_emphasizedtexts",
+  "info": {
+    "displayName": "emphasizedtext",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "isEmphasized": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

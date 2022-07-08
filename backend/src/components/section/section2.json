@@ -1,13 +1,11 @@
 {
   "collectionName": "components_section_section2s",
   "info": {
-    "displayName": "section2"
+    "displayName": "section2",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "headline": {
-      "type": "string"
-    },
     "paragraph_1": {
       "type": "text"
     },
@@ -18,6 +16,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.button1"
+    },
+    "emphasized_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.emphasizedtext"
     }
   }
 }
