@@ -15,7 +15,6 @@ export default function Home({ data }) {
   return (
     <Layout title={'Teifi Site'}>
       <div className='home-container'>
-        <ToastContainer position='bottom-center' />
         <Section1 data={data[0]} />
         <Section2 data={data[1]} />
         <LayoutOurServices data={data[2]} />
@@ -25,6 +24,7 @@ export default function Home({ data }) {
         <Section7 data={data[6]} />
         <Section8 data={data[7]} />
         <Section9 data={data[8]} />
+        <ToastContainer position='bottom-center' />
       </div>
     </Layout>    
   )
