@@ -328,14 +328,6 @@ $section1Height_3488: 184px;
       }
     }
   }
-  @media (max-width: 992px) {
-    .button,
-    .paragraph-2,
-    .paragraph-1,
-    .headline {
-      margin-left: 41px;
-    }
-  }
   @media (min-width: 1440px) {
     max-width: 1312px;
     .headline,
@@ -458,7 +450,11 @@ $section1Height_3488: 184px;
 }
 
 /* @Section3 - SECTION OUR SERVICES - 3 */
+.section3 {
+  background-color: #ECF3F6;
+}
 .section-our-services {
+  margin: 0 auto;
   .section-our-services-partners {
     display: flex;
     align-items: center;
@@ -562,16 +558,24 @@ $section1Height_3488: 184px;
   }
 
   @media (max-width: 600px) {
+    .container-content {
+      padding-top: 82px;
+    }
     .section-our-services-top {
       .section-our-services-headline {
-        // font-size: 32px;
-        // line-height: 150%;
+        width: 288px;
       }
       .section-our-services-paragraph {
       }
     }
+    .section-our-services-partners {
+      padding-bottom: 42px;
+    }
   }
 
+  @media (min-width: 1440px) {
+    max-width: 1312px;
+  }
   @media (min-width: 3488px) {
     .section-our-services-partners,
     .section-our-services-paragraph,
@@ -762,7 +766,13 @@ $section1Height_3488: 184px;
       display: flex;
       flex-direction: column;
       margin-right: 20px;
-      width: 33%;
+      min-width: 349px;
+      @media (min-width: 601px) and (max-width: 830px) {
+        min-width: 40%;
+      }
+      @media (min-width: 831px) and (max-width: 1200px) {
+        min-width: 33%;
+      }
       @media (max-width: 600px) {
         margin-right: 0;
         width: 100%;
@@ -779,6 +789,8 @@ $section1Height_3488: 184px;
       overflow: hidden;
       img {
         width: 100%;
+        height: 250px;
+        object-fit: cover;
       }
     }
     .bottom-cards-item-headline {
@@ -788,14 +800,26 @@ $section1Height_3488: 184px;
       font-weight: 700;
       letter-spacing: -2.3%;
       height: 120px;
+      @media (min-width: 601px) and (max-width: 1200px) {
+        height: 160px;
+        padding: 20px 20px;
+      }
+      @media (min-width: 601px) and (max-width: 830px) {
+        height: 140px;
+        font-size: 14px;
+      }
     }
     .bottom-cards-item-paragraph {
       padding: 0px 40px;
+      font-weight: 400;
       font-size: 14px;
       line-height: 28px;
       ul {
         padding: 10px 20px;
         list-style-position: outside;
+      }
+      @media (min-width: 601px) and (max-width: 1200px) {
+        padding: 0 20px;
       }
     }
   }

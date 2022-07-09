@@ -3,10 +3,10 @@ import { ToastContainer } from 'react-toastify'
 import Layout from '@/components/Layout/Layout'
 import Section1 from '@/components/Section1/Section1'
 import Section2 from '@/components/Section2/Section2'
+import Section3 from '@/components/Section3/Section3'
 import Section7 from '@/components/Section7/Section7'
 import Section8 from '@/components/Section8/Section8'
 import Section9 from '@/components/Section9/Section9'
-import LayoutOurServices from '@/components/Layout/LayoutOurServices';
 import LayoutOurProjects from '@/components/Layout/LayoutOurProjects';
 import LayoutOurAchievements from '@/components/Layout/LayoutOurAchievements';
 import LayoutCustomerReview from '@/components/Layout/LayoutCustomerReview';
@@ -17,7 +17,7 @@ export default function Home({ data }) {
       <div className='home-container'>
         <Section1 data={data[0]} />
         <Section2 data={data[1]} />
-        <LayoutOurServices data={data[2]} />
+        <Section3 data={data[2]} />
         <LayoutOurAchievements data={data[3]} />
         <LayoutOurProjects data={data[4]} />
         <LayoutCustomerReview data={data[5]} />

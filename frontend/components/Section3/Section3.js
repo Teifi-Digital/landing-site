@@ -1,5 +1,5 @@
 import { getStrapiMediaNotAPI } from "@/lib/media";
-import LayoutRightSide from "./LayoutRightSide";
+import LayoutRightSide from "@/components/Layout/LayoutRightSide";
 import { openInNewTab } from '@/utilities/window'
 import { useRouter } from "next/router"
 
