@@ -655,7 +655,9 @@ $section1Height_3488: 184px;
     background-color: transparent;
   }
   .section-our-achievements-top {
-    // max-width: 1090px;
+    .section-our-achievements-headline {
+      line-height: 200%;
+    }
   }
   .section-our-achievements-middle {
     margin-left: 0;
@@ -795,25 +797,10 @@ $section1Height_3488: 184px;
     }
   }
 
-  @media (min-width: 1681px) {
-    .section-our-achievements-tag,
-    .section-our-achievements-headline,
-    .section-our-achievements-paragraph {
-      margin-left: 200px;
-    }
-  }
-  @media (min-width: 1921px) {
-    .section-our-achievements-tag,
-    .section-our-achievements-headline,
-    .section-our-achievements-paragraph {
-      margin-left: 250px;
-    }
-  }
-  @media (min-width: 2561px) {
-    .section-our-achievements-tag,
-    .section-our-achievements-headline,
-    .section-our-achievements-paragraph {
-      margin-left: 300px;
+  @media (max-width: 600px) {
+    .section-our-achievements-headline {
+      height: 83px;
+      line-height: 129.5%;
     }
   }
   @media (min-width: 3488px) {
@@ -1382,11 +1369,50 @@ $section1Height_3488: 184px;
     }
   }
   @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.section9-mobile-container {
+  height: 132px;
+  background: #000514;
+  display: none;
+  @media (max-width: 600px) {
     display: block;
-    padding-top: 38px;
-    .social {
-      float: right;
-      margin-top: -9px;
+  }
+
+  .mobile-social {
+    padding-top: 27px;
+    text-align: center;
+    .mobile-social-item {
+      display: inline-block;
+      padding: 0 15px;
+    }
+  }
+
+  .top {
+    margin-bottom: 30px;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 335px;
+    margin: 0 auto;
+  }
+
+  .mobile-privacy-policy,
+  .mobile-copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.237418px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 600px) {
+    .mobile-social {
+      
     }
   }
 }
